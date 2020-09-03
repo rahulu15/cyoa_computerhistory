@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Displaying Content</title>
+    <link rel="stylesheet" href="styling.css">
+  </head>
+  <body>
+    <section>
+      <video id="my_vid" src="Everything Till 4Th.mp4" loop >
+      </video>
+      <ul class='navigation'>
+        <li onclick="changing_milestone(45)">
+          <img src="Thumbnails/1FM_tn.jpg" ></li>
+        <li onclick="changing_milestone(102)">
+          <img src="Thumbnails/2SM_tn.jpg" ></li>
+        <li onclick="changing_milestone(208)">
+          <img src="Thumbnails/3TM_tn.jpg" ></li>
+        <li onclick="changing_milestone(295)">
+          <img src="Thumbnails/4FM_tn.jpg" ></li>
+      </ul>
+      <button type="" onclick="changing_milestone(0)" name="res">Restart</button>
+      <script type="text/javascript">
+
+       var videoPlayer= document.getElementById('my_vid')
+        function changing_milestone(to_time){
+          videoPlayer.currentTime = to_time;
+        }
+
+        document.addEventListener('keyup', event => {
+          if (event.code === 'Space') {
+            if (videoPlayer.paused == false) {
+              videoPlayer.pause();
+            } else {
+              videoPlayer.play();
+            }
+          }
+        });
+
+      </script>
+  </section>
+ </body>
+</html>
