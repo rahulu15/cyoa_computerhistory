@@ -1,18 +1,75 @@
-*
-{
-  background-color: #1111;
-  margin:0;
-  padding:0;
-  box-sizing: content-box;
-  overflow: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-color: #DDDD;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.flip-card-container {
+  width: 960px;
+  height: 540px;
+  perspective: 1000px;
+
+}
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+
+}
+.flip-card-container.flipit  .flip-card {
+  transform: rotateY(-180deg); /* <=>  rotateY(.5turn) */
+}
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    border-radius: 20px;
+  /* border-radius: 0.5rem; */
+}
+.flip-card-front {
+  background-color: #333;
+  color: #fff;
+}
+.flip-card-back {
+  background-color: #517fa4;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+#our_vid{
+  width: 960px;
+  height: 540px;
+  border-radius: 20px;
 }
 section
 {
   position: relative;
-  width: 100%;
-  height: 100vh;
+  width: 50%;
+  height: 50vh;
+  display: contents;
+  justify-content: center;
+  align-items:baseline;
+  background-color: transparent;
 }
-section video
+/* section video
 {
   position: absolute;
   top: 0;
@@ -20,11 +77,11 @@ section video
   height: -webkit-calc(100% - 100px);
   height: calc(100% - 100px);
   object-fit: contain;
-}
+} */
 section .navigation
 {
   position: absolute;
-  bottom: 20px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
