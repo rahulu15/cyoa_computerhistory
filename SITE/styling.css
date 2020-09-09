@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   background-color: #DDDD;
 }
 body {
@@ -10,8 +9,8 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   overflow-y: hidden;
+  padding-top: 30px;
 }
 
 .flip-card-container {
@@ -113,3 +112,4 @@ section .navigation li img:hover
 {
   width: 120px;
 }
+/*
