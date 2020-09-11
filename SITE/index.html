@@ -10,34 +10,35 @@
 
 <body>
   <div class="flip-card-container" onclick="click_to_flip()">
-        <div class="flip-card">
-          <div class="flip-card-front">
-            Instructions go here <p></p>
-            <div class="buttons">
-              <div class="container">
-                  <button class="btn effect01" name="button"><span>It's my first time</span></button>
-                  <button class="btn effect01" name="button"><span>I've been here before</span></button>
-              </div>
+    <div class="flip-card">
+      <div class="flip-card-front">
+        Instructions go here <p></p>
+        <div class="buttons">
+          <div class="container">
+            <button class="btn effect01" name="button"><span>It's my first time</span></button>
+            <button class="btn effect01" name="button"><span>I've been here before</span></button>
+          </div>
 
-            </div>
-          </div>
-          <div class="flip-card-back">
-            <video id="our_vid" src="Till_fourth.mp4" autoplay loop> </video>
-          </div>
         </div>
+      </div>
+      <div class="flip-card-back">
+        <video id="our_vid" src="Till_fourth.mp4" autoplay loop> </video>
+      </div>
+    </div>
   </div>
   <section>
     <ul class='navigation'>
-      <li onclick="changing_milestone(45)">
+      <li onclick="changing_milestone_json(this)" id="milestone_1">
         <img src="Thumbnails/Icon.png"></li>
-      <li onclick="changing_milestone(101.9)">
+      <li onclick="changing_milestone_json(this)" id="milestone_2">
         <img src="Thumbnails/Icon.png"></li>
-      <li onclick="changing_milestone(208.6)">
+      <li onclick="changing_milestone_json(this)" id="milestone_3">
         <img src="Thumbnails/Icon.png"></li>
-      <li onclick="changing_milestone(295.2)">
+      <li onclick="changing_milestone_json(this)" id="milestone_4">
         <img src="Thumbnails/Icon.png"></li>
     </ul>
   </section>
+  <script src="mapping.js"></script>
   <script src="script.js" type="text/javascript">
 
   </script>
