@@ -1,11 +1,5 @@
 
-function changing_milestone(to_time) {
-  var videoPlayer = document.getElementById('our_vid')
-  videoPlayer.currentTime = to_time;
-  videoPlayer.play();
-}
-
-function changing_milestone_json(element) {
+function changing_milestone(element) {
   var id = element.id;
   var map = mapping
   console.log(id)
@@ -54,8 +48,25 @@ document.addEventListener('keyup', event => {
 function click_to_flip() {
   const card_container = document.querySelector(".flip-card-container")
   card_container.addEventListener('click', toggle_flip());
-
   function toggle_flip() {
     card_container.classList.toggle("flipit");
+  }
+  
+  const pow_btn = document.querySelector(".power-buttons")
+  pow_btn.addEventListener('click', toggle_rotate());
+  function toggle_rotate(){
+    pow_btn.classList.toggle("rot");
+  }
+
+  const bg = document.querySelector(".bod")
+  bg.addEventListener('click',toggle_col());
+  function toggle_col(){
+    bg.classList.toggle("col");
+  }
+
+  const slider = document.querySelector(".navigation")
+  slider.addEventListener('click',toggle_move());
+  function toggle_move(){
+    slider.classList.toggle('movup');
   }
 }

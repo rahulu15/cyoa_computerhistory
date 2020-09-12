@@ -8,36 +8,41 @@
 
 </head>
 
-<body>
-  <div class="flip-card-container" onclick="click_to_flip()">
-    <div class="flip-card">
-      <div class="flip-card-front">
-        Instructions go here <p></p>
-        <div class="buttons">
-          <div class="container">
-            <button class="btn effect01" name="button"><span>It's my first time</span></button>
-            <button class="btn effect01" name="button"><span>I've been here before</span></button>
-          </div>
-
-        </div>
-      </div>
-      <div class="flip-card-back">
-        <video id="our_vid" src="Till_fourth.mp4" autoplay loop> </video>
+<body class='bod'>
+  <div class="page">
+    <div class="video-part">
+      <div class="flip-card-container" >
+            <div class="flip-card">
+              <div class="flip-card-front">
+                Instructions go here
+              </div>
+              <div class="flip-card-back">
+                <video id="our_vid" src="Till_fourth.mp4" autoplay loop> </video>
+              </div>
+            </div>
       </div>
     </div>
+
+  <div class="foot">
+    <div class="power-buttons" onclick="click_to_flip()">
+      <div class="off">
+        <img src="Thumbnails/pow.png" alt="">
+      </div>
+    </div>
+    <section class="slid">
+      <ul class='navigation'>
+        <li onclick="changing_milestone(this)" id="milestone_1">
+          <img src="Thumbnails/Icon.png"></li>
+        <li onclick="changing_milestone(this)" id="milestone_2">
+          <img src="Thumbnails/Icon.png"></li>
+        <li onclick="changing_milestone(this)" id="milestone_3">
+          <img src="Thumbnails/Icon.png"></li>
+        <li onclick="changing_milestone(this)" id="milestone_4">
+          <img src="Thumbnails/Icon.png"></li>
+      </ul>
+    </section>
   </div>
-  <section>
-    <ul class='navigation'>
-      <li onclick="changing_milestone_json(this)" id="milestone_1">
-        <img src="Thumbnails/Icon.png"></li>
-      <li onclick="changing_milestone_json(this)" id="milestone_2">
-        <img src="Thumbnails/Icon.png"></li>
-      <li onclick="changing_milestone_json(this)" id="milestone_3">
-        <img src="Thumbnails/Icon.png"></li>
-      <li onclick="changing_milestone_json(this)" id="milestone_4">
-        <img src="Thumbnails/Icon.png"></li>
-    </ul>
-  </section>
+  </div>
   <script src="mapping.js"></script>
   <script src="script.js" type="text/javascript">
 

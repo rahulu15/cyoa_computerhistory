@@ -1,10 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #DDDD;
-}
-body {
+body{
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -12,12 +6,19 @@ body {
   overflow-y: hidden;
   padding-top: 30px;
 }
-
+.bod{
+  transition: background-color 0.7s ease-in-out;
+  background-color: #BCE1F5;
+}
+.bod.col{
+  background-color: #001249;
+}
 .flip-card-container {
+  right:100px;
   width: 960px;
   height: 540px;
-  perspective: 1000px;
-
+  perspective: 1000px
+  border:10px;
 }
 .flip-card {
   position: relative;
@@ -25,7 +26,6 @@ body {
   height: 100%;
   transition: transform 0.7s;
   transform-style: preserve-3d;
-
 }
 .flip-card-container.flipit  .flip-card {
   transform: rotateY(-180deg); /* <=>  rotateY(.5turn) */
@@ -40,11 +40,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-    border-radius: 20px;
+  border-radius: 20px;
   /* border-radius: 0.5rem; */
 }
 .flip-card-front {
-  background-color: #333;
+  background-color: #001249;
   color: #fff;
 }
 .flip-card-back {
@@ -52,12 +52,44 @@ body {
   color: #fff;
   transform: rotateY(180deg);
 }
-
 #our_vid{
   width: 960px;
   height: 540px;
+  padding: 0px;
+
   border-radius: 20px;
+  border: 8px double #DDDD;
 }
+/* footer with navigations */
+.power-buttons{
+  position: absolute;
+  display: inline-flex;
+  left:47%;
+  align-self: center;
+  margin-top: 15px;
+  transform-origin: center;
+  transform: rotateZ(0deg);
+  opacity: 0.1;
+  transition: 0.7s;
+}
+.power-buttons.rot{
+  transform: translate(-300px) rotateZ(90deg);
+  opacity: 1;
+  transition: 0.6s;
+
+}
+.power-buttons:hover {
+  cursor: pointer;
+}
+
+.off img{
+  border-radius: 50%;
+  box-shadow: 0 0 20px 1px #FFFF;
+  height: 100px;
+  width: 100px;
+}
+
+
 section
 {
   position: relative;
@@ -68,20 +100,12 @@ section
   align-items:baseline;
   background-color: transparent;
 }
-/* section video
-{
-  position: absolute;
-  top: 0;
-  left: 14%;
-  height: -webkit-calc(100% - 100px);
-  height: calc(100% - 100px);
-  object-fit: contain;
-} */
+
 section .navigation
 {
   position: absolute;
   bottom: 5px;
-  left: 50%;
+  left: 35%;
   transform: translateX(-50%);
   z-index: 100;
   display: flex;
@@ -112,4 +136,11 @@ section .navigation li img:hover
 {
   width: 120px;
 }
-/*
+section .navigation{
+  transform: scale(0);
+  transition: 0.5s;
+}
+section .navigation.movup{
+  transform: scale(1);
+  transition: 0.5s;
+}
