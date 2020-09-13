@@ -18,7 +18,7 @@ body{
   width: 960px;
   height: 540px;
   perspective: 1000px
-  border:10px;
+
 }
 .flip-card {
   position: relative;
