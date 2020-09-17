@@ -51,11 +51,16 @@ function click_to_flip() {
   function toggle_flip() {
     card_container.classList.toggle("flipit");
   }
-  
+
   const pow_btn = document.querySelector(".power-buttons")
   pow_btn.addEventListener('click', toggle_rotate());
   function toggle_rotate(){
     pow_btn.classList.toggle("rot");
+    var videoPlayer = document.getElementById("our_vid")
+    if (videoPlayer.paused == false) {
+      videoPlayer.pause();
+      setTimeout(()=> videoPlayer.currentTime=0,1000);
+    }
   }
 
   const bg = document.querySelector(".bod")

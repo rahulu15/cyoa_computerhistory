@@ -4,7 +4,8 @@ body{
   display: flex;
   justify-content: center;
   overflow-y: hidden;
-  padding-top: 30px;
+  overflow-x: hidden;
+  padding-top: 5px;
 }
 .bod{
   transition: background-color 0.7s ease-in-out;
@@ -15,9 +16,9 @@ body{
 }
 .flip-card-container {
   right:100px;
-  width: 960px;
-  height: 540px;
-  perspective: 1000px
+  width: 1097.14px;
+  height: 617.14px;
+  perspective: 1500px
 
 }
 .flip-card {
@@ -44,6 +45,7 @@ body{
   /* border-radius: 0.5rem; */
 }
 .flip-card-front {
+  font-family: 'Agency FB', arial;
   background-color: #001249;
   color: #fff;
 }
@@ -53,8 +55,8 @@ body{
   transform: rotateY(180deg);
 }
 #our_vid{
-  width: 960px;
-  height: 540px;
+  width: 1097.14px;
+  height: 617.14px;
   padding: 0px;
 
   border-radius: 20px;
@@ -66,10 +68,10 @@ body{
   display: inline-flex;
   left:47%;
   align-self: center;
-  margin-top: 15px;
+  margin-top: 10px;
   transform-origin: center;
   transform: rotateZ(0deg);
-  opacity: 0.1;
+  opacity: 0.2;
   transition: 0.7s;
 }
 .power-buttons.rot{
@@ -85,8 +87,8 @@ body{
 .off img{
   border-radius: 50%;
   box-shadow: 0 0 20px 1px #FFFF;
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
 }
 
 
@@ -104,7 +106,7 @@ section
 section .navigation
 {
   position: absolute;
-  bottom: 5px;
+  bottom: -5px;
   left: 35%;
   transform: translateX(-50%);
   z-index: 100;
@@ -128,13 +130,13 @@ section .navigation li:hover
 
 section .navigation li img
 {
-  border-radius: 20px;
-  width: 80px;
+  border-radius: 0px;
+  width: 60px;
   transition: 0.3s;
 }
 section .navigation li img:hover
 {
-  width: 120px;
+  width: 100px;
 }
 section .navigation{
   transform: scale(0);
