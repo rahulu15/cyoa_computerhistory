@@ -1,3 +1,4 @@
+/* body styling */
 body{
   width: 100vw;
   height: 100vh;
@@ -9,11 +10,12 @@ body{
 }
 .bod{
   transition: background-color 0.7s ease-in-out;
-  background-color: #BCE1F5;
+  background-color: #adc4cf;
 }
 .bod.col{
-  background-color: #001249;
+  background-color: #1a2444;
 }
+/* Flip card styling and animation */
 .flip-card-container {
   right:100px;
   width: 1097.14px;
@@ -29,31 +31,37 @@ body{
   transform-style: preserve-3d;
 }
 .flip-card-container.flipit  .flip-card {
-  transform: rotateY(-180deg); /* <=>  rotateY(.5turn) */
+  transform: rotateY(-180deg);
 }
+
 /* Position the front and back side */
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  /* border-radius: 0.5rem; */
+
 }
 .flip-card-front {
   font-family: 'Agency FB', arial;
   background-color: #001249;
+
   color: #fff;
+}
+.text{
+  font-size: 30px;
 }
 .flip-card-back {
   background-color: #517fa4;
   color: #fff;
   transform: rotateY(180deg);
 }
+
+/* video styling */
 #our_vid{
   width: 1097.14px;
   height: 617.14px;
@@ -63,19 +71,20 @@ body{
   border: 8px double #DDDD;
 }
 /* footer with navigations */
+/* power button styling and animation */
 .power-buttons{
   position: absolute;
   display: inline-flex;
   left:47%;
   align-self: center;
-  margin-top: 10px;
+  margin-top: 5px;
   transform-origin: center;
   transform: rotateZ(0deg);
-  opacity: 0.2;
+  opacity: 0.5;
   transition: 0.7s;
 }
 .power-buttons.rot{
-  transform: translate(-300px) rotateZ(90deg);
+  transform: translate(-650px) rotateZ(90deg);
   opacity: 1;
   transition: 0.6s;
 
@@ -91,7 +100,7 @@ body{
   width: 80px;
 }
 
-
+/* milestone buttons styling and animation */
 section
 {
   position: relative;
@@ -107,7 +116,7 @@ section .navigation
 {
   position: absolute;
   bottom: -5px;
-  left: 35%;
+  left: 20%;
   transform: translateX(-50%);
   z-index: 100;
   display: flex;
@@ -120,7 +129,7 @@ section .navigation li
   cursor: pointer;
   margin: 0 10px;
   padding: 0px 0px 0;
-  opacity: 0.8;
+  opacity: 0.9;
   transition: 0.3s;
 }
 section .navigation li:hover

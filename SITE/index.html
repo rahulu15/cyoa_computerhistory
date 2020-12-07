@@ -10,45 +10,67 @@
 </head>
 
 <body class='bod'>
-  <div class="page">
-    <div class="video-part">
+  <div id="page">
+    <div id="video-part">
+<!-- flip card where the video and instructions are going to be -->
       <div class="flip-card-container" >
             <div class="flip-card">
+<!-- front of the card(instructions) -->
               <div class="flip-card-front">
-                -Click power button to start <br>
-                -Spacebar to Play or Pause at any point <br>
-                -Left or Right arrow keys to move backward or forward <br>
+                <div class="text" style="">
+                  -Click power button to start<br>
+                  -Spacebar to Play or Pause at any point <br>
+                  -Left or Right arrow keys to move backward or forward <br>
+                  -Click on the buttons with dates to jump to that section.
+                </div>
               </div>
+<!-- back of the card (video) -->
               <div class="flip-card-back">
-                <video id="our_vid" src="Till_fourth.mp4" autoplay loop> </video>
+                <video id="our_vid" src="Till_fourthh.mp4" autoplay loop></video>
               </div>
             </div>
       </div>
     </div>
 
-  <div class="foot">
-    <div class="power-buttons" onclick="click_to_flip()">
-      <div class="off">
-        <img src="Thumbnails/pow.png" alt="">
+<!-- button to flip the card and change the milestones-->
+    <div class="foot">
+      <div class="power-buttons" onclick="click_to_flip()">
+        <div class="off">
+          <img src="Thumbnails/pow.png" alt="">
+        </div>
       </div>
+<!-- milestone buttons -->
+      <section class="slid">
+        <ul class='navigation'>
+          <li onclick="changing_milestone(this)" id="milestone_1">
+            <img src="Thumbnails/1801_icon.png"></li>
+          <li onclick="changing_milestone(this)" id="milestone_2">
+            <img src="Thumbnails/1837_icon.png"></li>
+          <li onclick="changing_milestone(this)" id="milestone_3">
+            <img src="Thumbnails/1930_icon.png"></li>
+          <li onclick="changing_milestone(this)" id="milestone_4">
+            <img src="Thumbnails/1940_icon.png"></li>
+          <li onclick="changing_milestone(this)" id="milestone_5">
+              <img src="Thumbnails/1950_icon.png"></li>
+          <li onclick="changing_milestone(this)" id="milestone_6">
+              <img src="Thumbnails/1960_icon.png"></li>
+          <li onclick="changing_milestone(this)" id="milestone_7">
+              <img src="Thumbnails/1970_icon.png"></li>
+          <li onclick="changing_milestone(this)" id="milestone_8">
+              <img src="Thumbnails/1980_icon.png"></li>
+          <li onclick="changing_milestone(this)" id="milestone_9">
+              <img src="Thumbnails/1990_icon.png"></li>
+          <li onclick="changing_milestone(this)" id="milestone_10">
+              <img src="Thumbnails/2000_icon.png"></li>
+          <li onclick="changing_milestone(this)" id="milestone_11">
+              <img src="Thumbnails/2010_icon.png"></li>
+        </ul>
+      </section>
     </div>
-    <section class="slid">
-      <ul class='navigation'>
-        <li onclick="changing_milestone(this)" id="milestone_1">
-          <img src="Thumbnails/1801_icon.png"></li>
-        <li onclick="changing_milestone(this)" id="milestone_2">
-          <img src="Thumbnails/1837_icon.png"></li>
-        <li onclick="changing_milestone(this)" id="milestone_3">
-          <img src="Thumbnails/1930_icon.png"></li>
-        <li onclick="changing_milestone(this)" id="milestone_4">
-          <img src="Thumbnails/1940_icon.png"></li>
-      </ul>
-    </section>
   </div>
-  </div>
+<!-- mapping the timings to the buttons and importing the jvascript-->
   <script src="mapping.js"></script>
   <script src="script.js" type="text/javascript">
-
   </script>
 </body>
 
